@@ -1,0 +1,593 @@
+/*
+    H O L Y M O N K E Y - A C A D E M Y
+    Design by Maca Fuentes @heeeeeeeybaby
+    Code by Fabián Ibarra @rhoadiemusic
+    Founders of @holymonkeyco
+    Founders of HolyMonkey Academy
+    Made with love in Santiago de Chile
+    
+*/
+
+/* R E S E T S */
+
+.container-fluid{
+    padding: 0;
+}
+.clearfix {
+    clear: both;
+}
+/* D E F I N E - V A R I A B L E S */
+
+:root{
+    
+    /* typography */
+    --mont: 'Montserrat', sans-serif;
+    --work: 'Work Sans', sans-serif;
+    
+    /* colors */
+    --primary: #00de7e;
+    --secondary: #00c96e;
+    --light: #c7ffe0;
+    --black: #2b2b2b;
+}
+
+/* T Y P O G R A P H Y - C L A S S E S */
+
+.mont{ font-family: var(--mont);}
+.work{ font-family: var(--work);}
+
+
+
+/* E L E M E N T S */
+
+p { 
+    font-family: var(--work);
+    font-size: 19px;
+    line-height: 28px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* H E L P E R - C L A S S E S */
+
+a:hover{
+    text-decoration: none;
+    color:var(--secondary);
+}
+.highlight{
+    color:var(--primary);
+}
+
+::-moz-selection { 
+    color: var(--primary);
+    background: var(--light);
+}
+
+::selection {
+    color: var(--primary);
+    background: var(--light);
+}
+
+/* B U T T O N S */
+
+.button{
+
+    display: inline-block;
+    font-family: var(--mont);
+    padding: 12px 30px;
+    border-radius: 70px;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    
+}
+
+
+.primary-button{ 
+    background-color: var(--primary);
+    color: white;
+    transition: all ease .3s;
+    box-shadow: 4px 4px 10px 0px #36df6f40;
+}
+
+.primary-button:hover{
+    background-color: var(--light);
+    color:var(--secondary);
+}
+.primary-button:hover span{
+    color:var(--primary);
+}
+.secondary-button{
+    background-color:white;
+    color: var(--primary);
+    border: 1px var(--primary) solid;
+}
+
+/* S H A P E S */
+
+.tridecagon{
+    -webkit-clip-path: polygon(9% 27%, 25% 11%, 47% 4%, 69% 7%, 88% 21%, 97% 41%, 96% 64%, 85% 83%, 65% 94%, 43% 96%, 22% 88%, 7% 70%, 3% 48%);
+clip-path: polygon(9% 27%, 25% 11%, 47% 4%, 69% 7%, 88% 21%, 97% 41%, 96% 64%, 85% 83%, 65% 94%, 43% 96%, 22% 88%, 7% 70%, 3% 48%);
+}
+
+.header-bg{
+    -webkit-clip-path: polygon(10% 0, 10% 7%, 14% 29%, 37% 58%, 71% 73%, 100% 71%, 100% 0%);
+    clip-path: polygon(10% 0, 10% 7%, 14% 29%, 37% 58%, 71% 73%, 100% 71%, 100% 0%);
+        position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+        width: 840px;
+}
+/* S C R O L L */
+
+.anchor{
+    position: relative;
+}
+.scroll {
+    height: 70px;
+    width: auto;
+}
+.anchor:before {
+    content: '';
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    top: 80px;
+    height: 60px;
+    display: block;
+    width: 1px;
+    margin-left: 46%;
+    background: linear-gradient(to bottom, rgb(148, 145, 145) 50%, rgba(255, 255, 255, 0) 50%);
+    background-position: 0 -60px;
+    background-size: 100% 200%;
+    animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+}
+
+/* ////////////////////////////
+        H E A D E R 
+//////////////////////////// */
+
+
+.custom-container {
+    display: grid;
+    grid-template-columns: 13% 2fr 1fr 13%;
+    grid-template-rows: 100px 1fr 100px;
+    grid-auto-flow: column;
+}
+
+.item-logo {
+    grid-column-start: 2;
+    align-self: center;
+}
+.item-title-container{
+    grid-column-start:2;
+    grid-row-start:2;
+        align-self: center;
+}
+.item-scroll {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    align-self: end;
+    place-self: self-end;
+}
+
+/*#header {*/
+/*    background: url(img/header-window.svg), url(img/academy-header.jpeg);*/
+/*    background-position: center bottom, 80px 0px;*/
+/*    background-size: cover, 1080px;*/
+/*    background-repeat: no-repeat, no-repeat;*/
+/*}*/
+
+#header {
+    /*background: url(img/header-window.svg), url(img/academy-header.jpeg);*/
+    /*background-position: -115px -15px , 0px 0;*/
+    /*background-size: 464px, 380px;*/
+    /*background-repeat: no-repeat, no-repeat;*/
+}
+
+
+
+.header-logo {
+    max-width: 244px;
+}
+
+.title-container {
+    /*padding-right: 50px;*/
+}
+
+/*.the-title{*/
+/*    margin-top: 244px;*/
+/*    margin-bottom: 35px;*/
+/*    font-size: 45px;*/
+/*    font-weight: bold;*/
+/*    line-height: 60px;*/
+/*}*/
+.the-title{
+    
+    margin-top: 75px;
+    margin-bottom: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 43px;
+}
+
+/*.the-title::after {*/
+/*    content: url(img/figure.svg);*/
+/*    position: absolute;*/
+/*    top: 9vh;*/
+/*    width: 38%;*/
+/*    left: 5%;*/
+/*    z-index: 0;*/
+/*    pointer-events: none;*/
+/*    animation: rotateSlow 40s infinite forwards;*/
+/*}*/
+
+
+
+/* ////////////////////////////
+        A B O U T 
+//////////////////////////// */
+
+
+#about{
+   padding: 10px 0 60px;
+}
+
+#pointer {
+    height: 220px;
+    position: absolute;
+    left: -190px;
+    top: -130px;
+}
+
+.potenciar{
+    position: relative;
+}
+#draw1 {
+    position: absolute;
+    width: 109px;
+    left: 107px;
+    top: -13px;
+    opacity: 0.69;
+}
+#habilidades {
+    position: absolute;
+    width: 109px;
+    left: 246px;
+    top: 19px;
+    opacity: 0.69;
+}
+
+
+/* ////////////////////////////
+        C O U R S E S
+//////////////////////////// */
+
+/*.swiper-container {*/
+   
+/*    height: 632px;*/
+/*}*/
+
+
+.swiper-pagination {
+    background-color: var(--primary);
+    width: 40px !important;
+    padding: 20px 0;
+    display: grid;
+    place-items: center;
+    right: 0;
+    grid-auto-rows: 40px;
+    left: auto !important;
+}
+.swiper-pagination-bullet-active {
+    background: #ffffff;
+}
+.course-wrapper{
+    padding:90px;
+}
+.course-meta{
+    opacity: .7;
+}
+.course-cat{
+    font-size:18px;
+    text-transform: lowercase;
+  
+}
+.course-title{
+    font-size: 34px;
+}
+
+.course-desc{
+    font-size: 19px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.course-date {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--black);
+    border-right: var(--black) solid 1px;
+    padding-right: 10px;
+}
+.course-lapse {
+    padding: 0 10px;
+    border-right: var(--black) solid 1px;
+}
+.course-lessons{
+    padding-left: 10px;
+}
+
+/* ////////////////////////////
+    O T H E R - C O U R S E S
+//////////////////////////// */
+
+.big-section-title {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+.big-section-separator {
+    width: 42px;
+    margin-right: 0;
+    border-top: 10px solid var(--primary);
+    margin-bottom: 20px;
+}
+.big-section-desc {
+    margin-bottom: 20px;
+    line-height: 28px;
+}
+.course-box {
+    display: block;
+    height: 340px;
+    border: solid 8px var(--primary);
+    padding: 55px 35px;
+}
+.course-box:before {
+    content: "";
+    background: var(--secondary);
+    position: absolute;
+    opacity: 0;
+     top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: all ease .3s;
+}
+.course-box:hover:before{
+     top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    opacity: 1;
+}
+.course-box:hover .course-box-title{
+    color: white;
+}
+.course-box-cat, .course-box-desc {
+    color: var(--black);
+    font-size: 14px;
+}
+.course-box-cat, .course-box-title, .course-box-meta{
+    margin-bottom: 12px;
+}
+.course-box-title{
+    color:var(--primary);
+      font-size: 19px;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+.course-box-meta{
+    font-size: 13px;
+    color: var(--black);
+    opacity: .7;
+}
+.course-box-desc{
+    line-height: 1.7em;
+}
+.empty-box{
+    background-color:var(--light);
+    opacity: .3;
+}
+.empty-space{
+    height: 170px;
+}
+
+
+
+/* ////////////////////////////
+    J O I N - I N
+//////////////////////////// */
+
+
+.join{
+    padding:200px 0 400px;
+}
+
+
+.contact-box {
+    border-top: solid 5px var(--primary);
+    padding-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 100px 10px;
+}
+.separator {
+    color: var(--primary);
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.contact-box-wrapper {
+    padding: 40px 30px;
+    text-align: center;
+}
+.contact-box-wrapper h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.contact-box-text {
+    margin-top: 20px;
+}
+.boxed-button {
+    /*display: flex;*/
+    height: 145px;
+    width: 50%;
+    margin: 0;
+    float: left;
+    box-sizing: border-box;
+    /*align-items: center;*/
+    /*place-content: center;*/
+    text-transform: uppercase;
+}
+
+.button-talk{
+    background-color: var(--light);
+}
+.button-rock{
+    background-color: var(--primary);
+}
+/* ////////////////////////////
+    G E N E R I C - A N I M A T I O N S
+//////////////////////////// */
+
+.animated{
+  opacity: .2;
+  
+  /*transform: translateY(45px);*/
+  transition: all ease-in-out 350ms;
+}
+
+.appear{
+   /*transform: translateY(0);*/
+   opacity: 1;
+   
+}
+
+.animated-slide{
+  /*opacity: 0;*/
+  /*visibility: 0;*/
+  transform: translateY(65px);
+  transition: all ease-in-out 550ms;
+}
+
+.slideIn{
+   transform: translateY(0);
+   /*opacity: 1;*/
+   visibility: visible;
+}
+
+
+/* ////////////////////////////
+    C U S T O M - A N I M A T I O N S
+//////////////////////////// */
+
+@keyframes rotateSlow {
+    0%{ transform:rotate(0deg)}
+    100%{ transform: rotate(360deg)}
+}
+
+@keyframes scrolldown {
+  0% {
+    background-position: 0 -60px;
+  }
+  75% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 60px;
+  }
+}
+
+/* ////////////////////////////
+    R E S P O N S I V E
+//////////////////////////// */
+
+
+/* 
+
+ Extra small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap
+ Small devices (landscape phones, 576px and up)
+
+*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    
+}
+
+@media (min-width: 576px) { 
+/*    .custom-container {*/
+/*    grid-template-columns: 13% 1fr 1fr 13%;*/
+/*}*/
+    
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+
+/*    #header{    */
+/*        background-size: cover, 1120px;*/
+/*    }*/
+
+    .custom-container {
+        grid-template-columns: 13% 1fr 1fr 13%;
+    }
+    #about {
+        padding: 100px 0 170px;
+    }
+    .the-title {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+/*    .the-title {*/
+/*        margin-top: 224px;*/
+/*    }*/
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    
+/*    #header {*/
+/*        background-position: -269px -151px, 269px -49px;*/
+/*    }*/
+  
+/*    .custom-container {*/
+/*        grid-template-columns: 13% 1fr 1fr 13%;*/
+/*    }*/
+/*}*/
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    
+  
+
+
+    #header {
+        background-size: 1380px, 960px;
+        background-position: 182% -31px, 541px -24px;
+        
+    }
+    
+    .custom-container {
+        grid-template-columns: 19% 1fr 1fr 19%;
+        grid-template-rows: 100px 1fr 100px;
+    }
+    .item-scroll{
+        grid-row-start: 4;
+    }
+
+    
+}
+
+@media (min-width: 1900px){
+    
+        #header {
+        background-size: 1920px, 1100px;
+        background-position: -100% -270px, 901px -1px;
+    }
+}
