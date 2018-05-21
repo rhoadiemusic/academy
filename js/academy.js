@@ -1,5 +1,15 @@
 $(document).ready(function(){
     
+    if($(window).width() < 768 ){
+    	console.log('menos que 768')
+    	$('.container-courses').addClass('container').removeClass('container-fluid');
+    }
+    else{
+    	console.log('mas que 768')
+    	$('.container-courses').addClass('container-fluid').removeClass('container');
+    }
+    
+    
     $("html").easeScroll({
   frameRate: 60,
   animationTime: 1000,
